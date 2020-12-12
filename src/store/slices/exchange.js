@@ -17,7 +17,7 @@ const exchange = createSlice({
   },
   reducers: {
     set: (state, action) => action.payload,
-    orderCancel: (state) => state.orderCancelling = true
+    orderCancel: (state) => { state.orderCancelling = true; }
   }
 });
 

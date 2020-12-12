@@ -64,7 +64,7 @@ module.exports = async function(callback) {
     let orderId
     result = await exchange.makeOrder(token.address, tokens(100), ETHER_ADDRESS, ether(0.1), { from: user1 })
     console.log(`Made order from ${user1}`)
-
+    
     // User 1 cancells order
     console.log(result.logs)
     orderId = result.logs[0].args.id

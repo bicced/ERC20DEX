@@ -150,8 +150,7 @@ export const loadExchangeData = async (web3, exchange, userAddress, allTokens, d
       allOrders,
       cancelledOrders,
       filledOrders,
-      openOrders,
-      orderCancelling: false
+      openOrders
     }))
 
     return exchangeEtherBalance
@@ -162,17 +161,22 @@ export const loadExchangeData = async (web3, exchange, userAddress, allTokens, d
 }
 
 export const cancelOrder = (exchange, order, account, dispatch) => {
-  console.log(order)
-  console.log(account)
-  console.log(exchange)
-  exchange.methods.cancelOrder(order).send({ from: account})
-  .on('transactionHash', (hash) => {
-    //dispatch
-    dispatch(exchangeSlice.actions.orderCancel())
-  })
-  .on('error', (error) => {
-    console.log(error)
-    window.alert('There was an Error')
-  })
-
+  dispatch(exchangeSlice.actions.orderCancel())
 }
+
+// export const cancelOrder = (exchange, order, account, dispatch) => {
+//   console.log(order)
+//   console.log(account)
+//   console.log(exchange)
+//   dispatch(exchangeSlice.actions.orderCancel())
+//   exchange.methods.cancelOrder(order).send({ from: account})
+//   .on('transactionHash', (hash) => {
+//     //dispatch
+//
+//   })
+//   .on('error', (error) => {
+//     console.log(error)
+//     window.alert('There was an Error')
+//   })
+//
+// }
