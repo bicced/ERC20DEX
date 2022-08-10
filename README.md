@@ -1,1 +1,1 @@
-Fully Decentralized ERC20 Ethereum Exchange
+Decentralized ERC20 Orderbook Exchange
