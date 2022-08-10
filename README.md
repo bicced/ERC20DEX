@@ -1,1 +1,1 @@
-Decentralized ERC20 Orderbook Exchange
+Decentralized ERC20 Orderbook Exchange (Practice Project)
